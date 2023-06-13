@@ -1,3 +1,3 @@
 # sway-bemenu-scripts
-# sway-bemenu-scripts
-# sway-bemenu-scripts
+
+Various scripts for sway and bemenu
