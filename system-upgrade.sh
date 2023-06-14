@@ -5,6 +5,6 @@ then
     sway [app_id='system-upgrade'] focus
 else
     foot -T 'System upgrade' -a 'system-upgrade floating 1460x920 border' \
-        /home/yves/Scripts/zsh/system-upgrade.sh
+        "$HOME"/Scripts/zsh/system-upgrade.sh
 fi
 
