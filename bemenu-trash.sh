@@ -28,7 +28,7 @@ RESTORE=$(trashList | bemenu \
 
 if [ -n "$RESTORE" ]; then
     RESTORE=$(echo "$RESTORE" | cut -f2- | cut -d' ' -f2-)
-    zenity --question --text="Etes-sûr de vouloir restaurer <b>$RESTORE</b> ?" --title="Confirmation"
+    zenity --question --text="Etes-vous sûr de vouloir restaurer <b>$RESTORE</b> ?" --title="Confirmation"
     case $? in
     0)
     echo 0 | 2>/dev/null 1>&2 trash-restore "$RESTORE"
