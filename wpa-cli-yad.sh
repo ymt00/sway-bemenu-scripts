@@ -12,7 +12,6 @@ function showNetworksList() {
     while true; do
         TEST_PROC=$(ps ax | grep -c "yad --list --name=wpa_cli floating 960x540")
         if [[ $TEST_PROC -lt 2 ]]; then break; fi
-        
         scanResults
         sleep 0.5
     done | yad --list \
@@ -111,6 +110,12 @@ function connectNetwork() {
 function selectNetwork() {
     sudo wpa_cli select_network "$1"
 }
+
+function testWpaSuppicant() {
+    if ! sudo wpa_cli status; then exit 1; fi
+}
+
+testWpaSuppicant
 
 setListNetworksMap
 
